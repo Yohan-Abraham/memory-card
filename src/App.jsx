@@ -1,19 +1,17 @@
 import './App.css';
-import { useEffect } from 'react';
 import Score from './components/score';
-import organizeData from './api/fetch';
+import Cards from './components/cards';
 
 function App() {
-  useEffect(() => {
-    organizeData();
-  }, []);
   return (
     <>
       <header>
         <h1>PokéMemory</h1>
         <Score></Score>
       </header>
-      <main></main>
+      <main>
+        <Cards></Cards>
+      </main>
       <footer></footer>
     </>
   );

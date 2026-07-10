@@ -1,0 +1,16 @@
+.cards-container {
+  padding: 5em 0;
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #1b4f91;
+  text-align: center;
+  padding: 3em;
+}
+
+.card h3 {
+  margin-top: 1em;
+}

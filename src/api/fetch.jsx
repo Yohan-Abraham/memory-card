@@ -35,6 +35,5 @@ export default async function organizeData() {
       return createPokemonObject(index, element.name, image);
     }),
   );
-  console.log(pokemons); //remove line when done
   return pokemons;
 }
