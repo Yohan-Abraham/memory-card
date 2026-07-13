@@ -1,16 +1,21 @@
 .cards-container {
   padding: 5em 0;
   display: flex;
+  justify-content: center;
   gap: 2em;
   flex-wrap: wrap;
 }
 
 .card {
+  border: none;
   background-color: #1b4f91;
   text-align: center;
-  padding: 3em;
+  padding: 5em;
 }
 
 .card h3 {
   margin-top: 1em;
+}
+.card:hover {
+  box-shadow: 1px 1px 29px #ef4444;
 }

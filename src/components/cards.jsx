@@ -1,7 +1,10 @@
-import { useEffect, useState } from 'react';
 import '../styles/card.css';
+import { useEffect, useState } from 'react';
 import organizeData from '../api/fetch';
-import Card from './card';
+
+function randomizePokemons(pokemons) {
+  return [...pokemons].sort(() => Math.random() - 0.5);
+}
 
 export default function Cards() {
   const [pokemons, setPokemon] = useState([]);
@@ -15,10 +18,21 @@ export default function Cards() {
     loadPokemon();
   }, []);
 
+  function handleShuffle() {
+    setPokemon(randomizePokemons(pokemons));
+  }
+
   return (
     <section className="cards-container">
       {pokemons.map((pokemon) => {
-        return <Card image={pokemon.image} name={pokemon.name}></Card>;
+        return (
+          <button key={pokemon.id} className="card" onClick={handleShuffle}>
+            <div className="img-container">
+              <img src={pokemon.image} alt={pokemon.name} />
+            </div>
+            <h3>{pokemon.name}</h3>
+          </button>
+        );
       })}
     </section>
   );
