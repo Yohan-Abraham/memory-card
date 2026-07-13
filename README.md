@@ -1,16 +1,77 @@
-# React + Vite
+# Pokémon Memory Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive memory card game built with **React** that challenges players to select each Pokémon only once. The application fetches Pokémon data from an external API, dynamically renders cards, and shuffles them after every successful selection to increase the difficulty.
 
-Currently, two official plugins are available:
+## Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Live Demo:** [https://memory-card-three-theta.vercel.app/]
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Dynamic Pokémon data fetched from the **PokéAPI**
+- Randomized card order after every successful selection
+- Current score and best score tracking
+- Duplicate click detection with game reset logic
+- Responsive layout for desktop and mobile devices
+- Component-based architecture using reusable React components
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Technologies
+
+- React
+- Vite
+- JavaScript (ES6+)
+- HTML5
+- CSS3
+- PokéAPI
+
+---
+
+## Key Concepts Demonstrated
+
+- React Hooks (`useState`, `useEffect`)
+- State management
+- API integration using asynchronous JavaScript
+- Component composition and props
+- Event handling
+- Conditional rendering
+- Immutable state updates
+- Dynamic list rendering
+
+---
+
+## Installation
+
+```bash
+git clone https://github.com/your-username/pokemon-memory-game.git
+
+cd pokemon-memory-game
+
+npm install
+
+npm run dev
+```
+
+---
+
+## Project Structure
+
+```text
+src/
+├── api/
+├── components/
+├── styles/
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+## API
+
+This project uses the **PokéAPI** to retrieve Pokémon data and official artwork.
+
+https://pokeapi.co/
